@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video layout</title>
 </head>
 <body>
-    <div class="parent-container" style="display: flex;">
-        <div style="background-color: lightpink; flex: 1; height: 300px;">Left</div>
-        <div style="background-color: lightblue; flex: 1; height: 300px;">Right
-            <div style="background-color: rgb(203, 191, 191); display: grid; grid-template-columns: 1fr 1fr;">
-                <p>Content for first</p>
-                <img src="" alt="First-image">
-            </div>
-            <div style="background-color: rgb(245, 203, 125); display: grid; grid-template-columns: 1fr 1fr;">
-                <p>Content for second</p>
-                <img src="" alt="Second-image">
-            </div>
-            <div style="background-color: rgb(4, 123, 220); display: grid; grid-template-columns: 1fr 1fr;">
-                <p>Content for third</p>
-                <img src="" alt="Third-image">
-            </div>
-            <div style="background-color: rgb(132, 143, 132); display: grid; grid-template-columns: 1fr 1fr;">
-                <p>Content for fourth</p>
-                <img src="" alt="Fourth-image">
-            </div>
-            <div style="background-color: rgb(162, 162, 237); display: grid; grid-template-columns: 1fr 1fr;">
-                <p>Content for fifth</p>
-                <img src="" alt="Fifth-image">
-            </div>
+  <!-- Flex row: left main + right sidebar -->
+  <div class="parent-container" style="display:flex; gap:16px;">
+
+    <!-- LEFT -->
+    <div style="background:black; flex:2; min-height:300px;">
+      Left
+      <!-- channel row -->
+      <div style="display:flex; align-items:center; margin-top:12px;">
+        <img src="styles\img\neural-network.jpg" alt="neural-network"
+            >
+             <p style="color: white; display: block;"><strong>Building a Neural Network from Scratch</strong></p>
+        <img src="styles/img/channel-1.jpg" alt="profile-pic"
+             style="width:40px; height:40px; border-radius:50%; object-fit:cover;">
+        <div style="display:flex; flex-direction:column; margin-left:10px;">
+          <p style="margin:0;">MrBeast</p>
+          <p style="margin:0; color:#555;">100M subscribers</p>
         </div>
+      </div>
     </div>
+
+    <!-- RIGHT (inside the same flex parent) -->
+    <div style="background:lightblue; flex:1; min-height:300px;">
+      Right
+      <!-- repeated suggestion card: 2-col grid -->
+      <div style="display:grid; grid-template-columns:120px 1fr; gap:8px; background:#cbbfbf; margin-top:8px; padding:8px;">
+        <img src="" alt="thumb" style="background:#999; width:100%; aspect-ratio:16/9;">
+        <p style="margin:0;">Content for first</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:120px 1fr; gap:8px; background:#f5cb7d; margin-top:8px; padding:8px;">
+        <img src="" alt="thumb" style="background:#999; width:100%; aspect-ratio:16/9;">
+        <p style="margin:0;">Content for second</p>
+      </div>
+
+      <!-- add more cards similarly -->
+    </div>
+
+  </div>
 </body>
 </html>
