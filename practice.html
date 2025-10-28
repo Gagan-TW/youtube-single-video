@@ -6,28 +6,82 @@
     <title>Document</title>
 </head>
 <body>
+    <!--
+        MAIN CONTAINER:
+        - Acts as parent for the two main columns (Left + Right).
+        - Using display:flex to align them side by side in a row.
+    -->
     <div class="parent-container" style="display: flex;">
-        <div style="background-color: lightpink; flex: 1; height: 300px;">Left</div>
-        <div style="background-color: lightblue; flex: 1; height: 300px;">Right
+        
+        <!--
+            LEFT SECTION:
+            - Represents the main video or player area.
+            - flex:1 means it takes equal width as the right section (you can adjust later).
+        -->
+        <div style="background-color: lightpink; flex: 1; height: 500px;display: flex; flex-direction: column;">
+            Left
+            <div style="flex: 1; position: relative;"><img  src="" alt="Left">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"><img src="" alt="play-button"></div>
+        </div>
+            <div style="flex: 1;"><p>Description for the left video</p></div>
+            <div style="display: grid; grid-template-columns: 1fr 3fr; align-items: center;">
+                <img src="" alt="profile-pic">
+                <div style="display: inline-block;"> <button>Like</button>
+                <button>Dislike</button>
+                <button>Share</button>
+    
+                </div>
+            </div>
+            <div style="background-color: beige; height: 200px;"><p>Additional information for the left video</p>
+            <p>Comments</p></div>
+        </div>
+
+        <!--
+            RIGHT SECTION:
+            - Represents the sidebar (suggested videos).
+            - Contains five child divs, each a two-column grid (thumbnail + info).
+            - flex:1 means same width as left for now (you’ll modify later).
+        -->
+        <div style="background-color: lightblue; flex: 1; height: 300px;">
+            Right
+
+            <!--
+                FIRST VIDEO CARD
+                - Uses grid with two columns.
+                - Left column = text (info), Right column = image (thumbnail).
+            -->
             <div style="background-color: rgb(203, 191, 191); display: grid; grid-template-columns: 1fr 1fr;">
-                <p>Content for first</p>
+                
                 <img src="" alt="First-image">
+                <p>Content for first</p>
             </div>
+
+            <!-- SECOND VIDEO CARD -->
             <div style="background-color: rgb(245, 203, 125); display: grid; grid-template-columns: 1fr 1fr;">
-                <p>Content for second</p>
+    
                 <img src="" alt="Second-image">
+                 <p>Content for second</p>
             </div>
+
+            <!-- THIRD VIDEO CARD -->
             <div style="background-color: rgb(4, 123, 220); display: grid; grid-template-columns: 1fr 1fr;">
-                <p>Content for third</p>
+              
                 <img src="" alt="Third-image">
+                <p>Content for third</p>
             </div>
+
+            <!-- FOURTH VIDEO CARD -->
             <div style="background-color: rgb(132, 143, 132); display: grid; grid-template-columns: 1fr 1fr;">
-                <p>Content for fourth</p>
+                
                 <img src="" alt="Fourth-image">
+                <p>Content for fourth</p>
             </div>
+
+            <!-- FIFTH VIDEO CARD -->
             <div style="background-color: rgb(162, 162, 237); display: grid; grid-template-columns: 1fr 1fr;">
-                <p>Content for fifth</p>
+                
                 <img src="" alt="Fifth-image">
+                <p>Content for fifth</p>
             </div>
         </div>
     </div>
