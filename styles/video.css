@@ -7,32 +7,46 @@
     background-color: black;
     flex: 2;
     min-height: 300px;
+    position: relative;
 }
 
 .suggested-videos {
     background-color: rgb(247, 243, 243);
     flex: 1;
-    min-height: 300px;
+    height: 300px;
     padding: 16px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.video-container {
+    position: relative;
 }
 
 .video-thumbnail {
     width: 100%;
-    height: auto;
+    height: 350px;
     display: block;
     margin-bottom: 8px;
 }
 
 .video-title {
+    color: white;
     font-size: 24px;
     font-weight: bold;
     display: block;
+    margin-top: 10px;
+}
+
+.video-info {
+    margin-top: 10px;
+    background-color: rgb(39, 38, 38);
+    padding: 4px;
+
 }
 
 .suggested-video-thumbnail {
-    
+    display: flex;
   
     
 }
@@ -46,7 +60,7 @@
 }
 
 .sugg-video-info {
-  
+  flex:1
        
     
 }
@@ -69,4 +83,99 @@
     color: gray;
     display: block;
     
+}
+
+.timestamp-1 {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2px 4px;
+    font-size: 10px;
+    border-radius: 2px;
+}
+.timestamp-2 {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2px 4px;
+    font-size: 10px;
+    border-radius: 2px;
+}
+
+.video-author {
+    color: white;
+    font-size: 14px;
+    margin-top: 4px;
+    display: block;
+}
+
+.video-subscriber {
+    color: gray;
+    font-size: 12px;
+    margin-top: 2px;
+    display: block;
+}
+
+.video-maker-pic {
+    top: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+   
+  
+    
+}
+
+.video-meta-details {
+    
+}
+
+.video-details-container {
+    margin-top: 20px;
+    height: 80px;
+    display: flex;
+    
+}
+
+.video-maker {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.video-maker-pic {
+    
+}
+
+.video-details {
+    margin-left: 10px;
+    
+}
+
+.subscriber-button-container {
+
+}
+
+.subscribe-button {
+ background-color: rgb(24, 186, 240);
+ border-radius: 20px;
+ margin-left: 590px;
+}
+.play-button-container {
+    position: absolute;
+    top: 50%;             
+    left: 50%;   
+    cursor: pointer;
+    font-size: 30px;
+    padding: 12px 14px;
+    border-radius: 50%;
+    color: white;
+}
+
+.video-buttons {
+    display: flex;
 }
