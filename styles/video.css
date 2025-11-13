@@ -179,3 +179,39 @@
 .video-buttons {
     display: flex;
 }
+
+.description-box {
+    background-color: rgb(79, 79, 79);
+    color: white;
+    position: relative;
+}
+
+.arrow-sign {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+
+.comments-box {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.comment-time {
+    color: rgb(113, 108, 108);
+}
+
+.comment-1 {
+    display: flex;
+    color: white;
+}
+
+.comment-1 {
+    display: flex;
+}
+
+.commenter-1-pic {
+    width: 50px;
+    border-radius: 50%;
+}
